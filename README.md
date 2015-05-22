@@ -1,6 +1,6 @@
 # tiny-static
 
-> A tiny static site generator using [Jade](http://jade-lang.com) and
+> A tiny static site generator for tiny sites, using [Jade](http://jade-lang.com) and
 the [npm scripts property](https://docs.npmjs.com/misc/scripts).
 
 ## Install
@@ -41,6 +41,17 @@ npm start
 
 This will compile the Jade files in `jade/site` into a folder called `out`.
 Extend this static site generator with more npm tasks to add your asset building and so forth.
+
+## Markdown Support
+
+Install the `marked` package and save it as a devDependency.
+
+```
+npm install marked --save-dev
+```
+
+Now use the `:markdown` filter in your Jade files as described
+[here](http://jade-lang.com/reference/filters/).
 
 ## License
 MIT
