@@ -1,0 +1,14 @@
+{
+  "name": "tiny-static",
+  "version": "1.0.0",
+  "description": "A tiny static site generator.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kahlil Lechelt",
+  "license": "MIT",
+  "devDependencies": {
+    "jade": "^1.9.2"
+  }
+}
