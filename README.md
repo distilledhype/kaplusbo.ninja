@@ -7,19 +7,19 @@ the [npm scripts property](https://docs.npmjs.com/misc/scripts).
 
 Clone this repository.
 
-```sh
-git clone git@github.com:distilledhype/tiny-static.git
+```
+git clone git@github.com:distilledhype/tiny-static.git <YOUR TARGET DIR>
 ```
 
-You might want to change your origin to the repo of your choice.
+You may want to change your origin to the repo of your choice.
 
-```sh
+```
 git remote set-url origin <YOUR REPO URL>
 ```
 
 Install the devDependencies.
 
-```sh
+```
 npm install
 ```
 
