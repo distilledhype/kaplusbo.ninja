@@ -1,4 +1,4 @@
-# tiny-static
+# Tiny Static
 
 > A tiny static site generator for tiny sites, using [Jade](http://jade-lang.com) and
 the [npm scripts property](https://docs.npmjs.com/misc/scripts).
