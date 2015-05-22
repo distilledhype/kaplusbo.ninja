@@ -11,7 +11,7 @@ Clone this repository.
 git clone git@github.com:distilledhype/tiny-static.git <TARGET DIR>
 ```
 
-You may want to change your origin to the repo of your choice.
+You may want to change `origin` to the remote repo of your choice.
 
 ```
 git remote set-url origin <YOUR REPO URL>
