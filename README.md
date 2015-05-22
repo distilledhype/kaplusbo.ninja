@@ -1,6 +1,7 @@
 # tiny-static
 
-> A tiny static site generator using [Jade](http://jade-lang.com).
+> A tiny static site generator using [Jade](http://jade-lang.com) and
+the [npm scripts property](https://docs.npmjs.com/misc/scripts).
 
 ## Install
 
