@@ -38,5 +38,8 @@ or
 npm start
 ```
 
+This will compile the Jade files in `jade/site` into a folder called `out`.
+Extend this static site generator with more npm tasks to add your asset building and so forth.
+
 ## License
 MIT
