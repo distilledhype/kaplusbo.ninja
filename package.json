@@ -3,12 +3,36 @@
   "version": "1.0.0",
   "description": "A tiny static site generator.",
   "scripts": {
-    "tiny-static": "jade --out out -P jade/site",
-    "start": "npm run tiny-static"
+    "jade": "jade --pretty src/jade/site -o out",
+    "scss": "node-sass src/scss/main.scss out/css/main.css",
+    "js": "mkdir -p out/js; browserify src/js/main.js -o out/js/bundle.js -dv",
+    "watch-jade": "jade --watch --pretty src/jade/site -o out",
+    "watch-scss": "node-sass --output-style expanded --source-map true --watch --recursive src/scss --output out/css",
+    "watch-js": "mkdir -p out/js; watchify src/js/main.js -o out/js/bundle.js -dv",
+    "watch": "npm run watch-jade & npm run watch-js & npm run watch-scss",
+    "livereload": "live-reload --port=9000 ./out",
+    "static-server": "http-server ./out",
+    "serve": "npm run static-server & npm run livereload",
+    "open": "opener http://0.0.0.0:8080/",
+    "clean": "trash out",
+    "start": "npm run serve & npm run watch & npm run open"
   },
-  "author": "Kahlil Lechelt",
+  "author": {
+    "name": "Kahlil Lechelt",
+    "email": "hello@kahlil.info",
+    "url": "http://kahlil.info"
+  },
   "license": "MIT",
+  "repository": "distilledhype/tiny-static",
   "devDependencies": {
-    "jade": "latest"
+    "browserify": "^10.2.1",
+    "http-server": "^0.8.0",
+    "jade": "latest",
+    "live-reload": "^1.1.0",
+    "node-sass": "^3.1.2",
+    "opener": "^1.4.1",
+    "trash": "^1.4.1",
+    "uglify": "^0.1.3",
+    "watchify": "^3.2.1"
   }
 }
