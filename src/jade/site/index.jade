@@ -5,6 +5,10 @@ html
   +head("My Site")
   body
     include ../includes/logo.jade
-    .content
-      include ../content/index.jade
+    
+    .content.grid-width-desktop
+      .grid-flex-container
+        .grid-flex-cell
+          include ../content/index.jade
+    
     include ../includes/footer.jade
