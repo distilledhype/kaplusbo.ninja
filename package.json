@@ -1,7 +1,7 @@
 {
-  "name": "kaundbo.com",
+  "name": "kaplusbo.ninja",
   "version": "1.0.0",
-  "description": "KA & BO",
+  "description": "Ka+Bo",
   "scripts": {
     "jade": "jade --pretty --hierarchy src/jade/site -o out",
     "stylus": "mkdir -p out/css; stylus -u yeticss ./src/stylus/main.styl --out ./out/css -m",
@@ -9,7 +9,7 @@
     "images": "cp -R src/images out/images",
     "svg": "cp -R src/svg out/svg",
     "build": "parallelshell 'npm run jade' 'npm run stylus' 'npm run js' 'npm run images' 'npm run svg'",
-    "deploy": "npm run build && surge ./out kaundbo.surge.sh",
+    "deploy": "npm run build && surge ./out kaplusbo.surge.sh",
     "watch-jade": "./tasks/watch.js --dir ./src/jade --exec 'npm run jade'",
     "watch-stylus": "./tasks/watch.js --dir ./src/stylus --exec 'npm run stylus'",
     "watch-js": "mkdir -p out/js; watchify src/js/main.js -o out/js/bundle.js -dv",
@@ -18,7 +18,7 @@
     "static-server": "http-server ./out -s -o",
     "serve": "parallelshell 'npm run static-server' 'npm run livereload'",
     "clean": "trash out",
-    "start": "npm run build && parallelshell 'npm run serve' 'npm run watch'"
+    "start": "npm run build -s && parallelshell 'npm run serve -s' 'npm run watch -s'"
   },
   "author": {
     "name": "Kahlil Lechelt",
