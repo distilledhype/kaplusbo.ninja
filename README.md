@@ -1,4 +1,4 @@
-# KA & BO
+# KA+BO
 
 _WIP_
 
