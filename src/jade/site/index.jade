@@ -2,15 +2,14 @@ include ../mixins/head.jade
 
 doctype html
 html
-  +head("My Site")
+  +head("Ka+Bo")
   body
     include ../includes/logo.jade
     
     h1.center.title Cannstatt Badd
     
-    .content.grid-width-desktop
-      .grid-flex-container
-        .grid-flex-cell.remove-top-padding
-          include ../content/index.jade
+    .container.content.grid-width-desktop
+      .remove-top-padding
+        include ../content/index.jade
     
     include ../includes/footer.jade

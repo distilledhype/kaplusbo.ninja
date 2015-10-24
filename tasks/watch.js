@@ -6,7 +6,7 @@ var argv = parseArgs(process.argv.slice(2));
 var watch = require('node-watch');
 var exec = require('child_process').exec;
 
-var child, command, dir;
+var command, dir;
 
 if (argv.dir) {
   dir = argv.dir;
@@ -24,10 +24,10 @@ watch(dir, function (filename) {
   console.log('\nchanged: ' + filename);
 
   function execCb (error, stdout, stderr) {
-    if (stdout) console.log('\nstdout: ' + stdout);
-    if (stderr) console.log('\nstderr: ' + stderr);
+    if (stdout) console.log('\nstdout:\n' + stdout);
+    if (stderr) console.log('\nstderr:\n' + stderr);
     if (error !== null) console.log('exec error: ' + error);
   }
 
-  child = exec(command, execCb);
+  exec(command, execCb);
 });

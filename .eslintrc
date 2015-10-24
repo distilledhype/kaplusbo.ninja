@@ -4,6 +4,7 @@
     "no-console": 0,
     "no-debugger": 0,
     "radix": 2,
+    "curly": 0,
     "vars-on-top": 2,
     "wrap-iife": 2,
     "strict": [2, "global"],
