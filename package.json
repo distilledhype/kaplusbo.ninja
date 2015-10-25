@@ -6,7 +6,7 @@
     "jade": "jade --pretty --hierarchy src/jade/site -o out",
     "stylus": "mkdirp out/css; stylus -u yeticss ./src/stylus/main.styl --out ./out/css -m",
     "js": "mkdirp out/js; browserify src/js/main.js -o out/js/bundle.js -dv",
-    "images": "mkdirp out/images && cp -R src/images out/images",
+    "images": "mkdirp out/images && cp -R src/images out",
     "svg": "mkdirp out/images && cp -R src/svg out/svg",
     "build": "parallelshell 'npm run jade' 'npm run stylus' 'npm run js' 'npm run images' 'npm run svg'",
     "deploy": "npm run clean && npm run build && surge ./out kaplusbo.ninja",
