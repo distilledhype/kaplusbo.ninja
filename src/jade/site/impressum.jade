@@ -1,0 +1,13 @@
+include ../mixins/head.jade
+
+doctype html
+html
+  +head("Ka+Bo")
+  body
+    include ../includes/logo.jade
+    
+    .container.content.grid-width-desktop
+      .remove-top-padding
+        include ../content/impressum.jade
+    
+    include ../includes/footer.jade
